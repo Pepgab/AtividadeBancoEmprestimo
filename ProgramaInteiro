@@ -1,0 +1,23 @@
+public class EsprestimoBanco {
+	
+	public static boolean aprovaEmprestimo (double rendaAnual, double valorEmprestimo ) {
+		if (rendaAnual < valorEmprestimo * 3) {
+			return false;
+		}
+		if (valorEmprestimo > 50000) {
+			return false;
+		}
+		return true;
+	}
+	
+	public static void main(String[] args) {
+		double rendaAnual = 60000;
+		double valorEmprestimo = 50001;
+		if (aprovaEmprestimo(rendaAnual, valorEmprestimo)) {
+			System.out.println("\n Empréstimo Aprovado. \n");
+		} else {
+			System.out.println("\n Negado. \n");
+		}
+	}
+
+}
